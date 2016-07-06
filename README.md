@@ -1,25 +1,29 @@
-# Ember-cli-ie-detect
+# ember-cli-ie-detect
 
-This README outlines the details of collaborating on this Ember addon.
+This ember addon provides a simple way to detect the IE or Edge browsers and their version.
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+```
+ember install ember-cli-ie-detect
+```
 
-## Running
+## Usage
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+The method is available as a service, injected into files.
 
-## Running Tests
+```js
+export default Ember.Controller.extend({
+  ieVersion: Ember.inject.service('ieDetect'),
+})
+```
 
-* `ember test`
-* `ember test --server`
+After injecting the service, it's pretty straight forward to use.
 
-## Building
+```js
+this.get('ieVersion') >= 12     // Edge
+this.get('ieVersion') < 12      // IE
+this.get('ieVersion') === false // Not IE or Edge
+```
 
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+Simple as that.
