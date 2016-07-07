@@ -1,3 +1,13 @@
-<h2 id="title">Welcome to Ember</h2>
+<h2 id="title">ember-cli-ie-detect</h2>
 
-{{outlet}}
+{{#if isIE}}
+  <p>You're on IE v{{ieDetect.version}}. Sorry about that.</p>
+{{/if}}
+
+{{#if isEdge}}
+  <p>You're on Edge v{{ieDetect.version}}. At least it's not IE.</p>
+{{/if}}
+
+{{#if isNiether}}
+  <p>You're not on IE or Edge! Congrats!</p>
+{{/if}}
