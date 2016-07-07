@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-ie-detect",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Provides a simple way to detect the IE or Edge browsers and their version.",
   "directories": {
     "doc": "doc",
